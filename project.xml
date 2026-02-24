@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+    <app main="Main" file="TestStorageApp" package="com.test.storage" version="1.0.0"/>
+    <window width="800" height="600"/>
+    <android target-sdk-version="30"/>
+    <android min-sdk-version="21"/>
+    <android permission="READ_EXTERNAL_STORAGE"/>
+    <android permission="WRITE_EXTERNAL_STORAGE"/>
+    <source path="source"/>
+</project>
