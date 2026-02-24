@@ -68,6 +68,9 @@ jobs:
           haxelib run lime rebuild tools
           haxelib run lime setup -y
 
+      - name: Setup Lime Android Target
+        run: haxelib run lime setup android -y
+
       - name: Build APK
         run: haxelib run lime build android -debug
 
