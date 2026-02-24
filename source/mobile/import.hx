@@ -1,27 +1,3 @@
-#if !macro
-#if TOUCH_CONTROLS
-import flixel.FlxCamera;
-import flixel.FlxG;
-import flixel.FlxSprite;
-import flixel.math.FlxPoint;
-import flixel.util.FlxColor;
-import flixel.util.FlxDestroyUtil;
-import flixel.tweens.FlxEase;
-import flixel.tweens.FlxTween;
-import flixel.sound.FlxSound;
-import funkin.backend.assets.ModsFolder;
-import funkin.backend.assets.Paths;
-import funkin.backend.utils.CoolUtil;
-import funkin.backend.utils.NativeAPI;
-import funkin.options.Options;
-import mobile.objects.TouchButton;
-import mobile.objects.TouchPad;
-import mobile.funkin.backend.utils.MobileData;
-import mobile.funkin.backend.system.input.MobileInputID;
-import mobile.funkin.backend.system.input.MobileInputManager;
-#end
-import mobile.funkin.backend.utils.StorageUtil;
-
 #if android
 import android.content.Context as AndroidContext;
 import android.os.Environment as AndroidEnvironment;
