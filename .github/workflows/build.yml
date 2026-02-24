@@ -53,10 +53,14 @@ jobs:
         run: |
           haxelib install lime 8.1.2 --quiet
           haxelib install openfl 9.3.3 --quiet
-          haxelib run lime setup -y
-
+          haxelib run lime setup
+          haxelib run lime setup android
+          
       - name: Build APK
         run: haxelib run lime build android -debug
+
+      - name: Find APK
+        run: find . -name "*.apk"
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
