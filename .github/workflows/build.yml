@@ -10,7 +10,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       # Haxe 4.2.5
       - name: Setup Haxe
@@ -54,7 +54,7 @@ jobs:
 
       # Upload APK
       - name: Upload APK
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: TestStorageApp-APK
           path: export/android/bin/app/build/outputs/apk/debug/*.apk
