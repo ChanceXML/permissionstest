@@ -56,11 +56,14 @@ jobs:
 
       - name: Install Lime + OpenFL
         run: |
-          haxelib install lime 8.1.2 --quiet
-          haxelib install openfl 9.3.3 --quiet
-          haxelib run lime setup
-          haxelib run lime setup android
-          
+         haxelib install lime 8.1.2 --quiet
+         haxelib set lime 8.1.2
+         haxelib install openfl 9.3.3 --quiet
+         haxelib set openfl 9.3.3
+         haxelib run lime rebuild tools
+         haxelib run lime setup
+         haxelib run lime setup android
+            
       - name: Build APK
         run: haxelib run lime build android -debug
 
