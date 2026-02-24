@@ -54,8 +54,9 @@ jobs:
           echo "ANDROID_SDK=$HOME/android-sdk" >> $GITHUB_ENV
           echo "ANDROID_NDK_ROOT=$HOME/android-sdk/ndk/21.4.7075529" >> $GITHUB_ENV
 
-      - name: Install Lime + OpenFL
+      - name: Install Lime + OpenFL + Dependencies
         run: |
+         haxelib install format --quiet
          haxelib install lime 8.1.2 --quiet
          haxelib set lime 8.1.2
          haxelib install openfl 9.3.3 --quiet
@@ -63,7 +64,7 @@ jobs:
          haxelib run lime rebuild tools
          haxelib run lime setup
          haxelib run lime setup android
-            
+                
       - name: Build APK
         run: haxelib run lime build android -debug
 
